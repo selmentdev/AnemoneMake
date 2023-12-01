@@ -126,15 +126,16 @@ This will generate a structure of the project in the output directory:
 ```
 \- Output
   \- SampleTarget-Windows-X64
-  | |- Platform.bff
-  | |- Target.bff
-  | |- Solution.bff
-  | |- Target-Debug.bff
-  | |- Target-Development.bff
-  | |- Target-EngineDebug.bff
-  | |- Target-GameDebug.bff
-  | |- Target-Shipping.bff
-  | \- Target-Testing.bff
+  | \- Rules
+  |   |- Platform.bff
+  |   |- Target.bff
+  |   |- Solution.bff
+  |   |- Target-Debug.bff
+  |   |- Target-Development.bff
+  |   |- Target-EngineDebug.bff
+  |   |- Target-GameDebug.bff
+  |   |- Target-Shipping.bff
+  |   \- Target-Testing.bff
   \- SampleTarget-Windows-AArch64
     \- ...
 ```
@@ -146,17 +147,17 @@ Use `FastBuild` project generator (https://www.fastbuild.org/docs/home.html) to 
 4.1. Build project directly:
 
 ```
-fastbuild --config ./Output/SampleTarget-Windows-X64/Target.bff Target-Debug
+fastbuild --config ./Output/SampleTarget-Windows-X64/Rules/Target.bff Target-Debug
 ```
 
 4.2. Build and execute unit tests
 
 ```
-fastbuild --config ./Output/SampleTarget-Windows-X64/Target.bff Tests-Debug
+fastbuild --config ./Output/SampleTarget-Windows-X64/Rules/Target.bff Tests-Debug
 ```
 
 4.3. Generate Visual Studio solution files:
 
 ```
-fastbuild --config ./Output/SampleTarget-Windows-X64/Solution.bff Solution
+fastbuild --config ./Output/SampleTarget-Windows-X64/Rules/Solution.bff Solution
 ```
