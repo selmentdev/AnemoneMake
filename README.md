@@ -33,7 +33,7 @@ Create a file named `Project.json` in the root directory of the project.
 }
 ```
 
-2. Create target and mdoule manifest files
+2. Create target and module manifest files
 
 ```
 \- Source
